@@ -16,7 +16,7 @@ dependencies = [('hwloc', '1.11.3')]
 
 configopts = '--with-threads=posix --enable-shared --enable-mpi-thread-multiple --with-verbs '
 configopts += '--enable-mpirun-prefix-by-default '  # suppress failure modes in relation to mpirun path
-configopts += '--with-hwloc=$EBROOTHWLOC '  # hwloc support
+configopts += '--without-ucx --with-hwloc=$EBROOTHWLOC '  # hwloc support
 
 # needed for --with-verbs
 osdependencies = [('libibverbs-dev', 'libibverbs-devel', 'rdma-core-devel')]
